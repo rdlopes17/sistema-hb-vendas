@@ -1,0 +1,30 @@
+{
+  "cadastros": [
+    {
+      "nome":" 'nome do forncedor 1'",
+      "categoria": "cadastro do fornecedor 1",
+      "email": "fornecedor2@contato.com",
+      "telefone":"77777777777777777777777777"
+    },
+    {
+      "nome":" 'nome do forncedor 1'",
+      "categoria": "cadastro do fornecedor 2",
+      "email": "fornecedor3@contato.com",
+      "telefone":"888888888888888888888888888"
+    },
+    {
+      "nome":" 'nome do forncedor 3'",
+      "categoria": "cadastro do fornecedor 3",
+      "email": "fornecedor3@contato.com",
+      "telefone":"99999999999999999999999999"
+    },
+    {
+      "nome":" 'nome do forncedor 4'",
+      "categoria": "cadastro do fornecedor 4",
+      "email": "fornecedor4@contato.com",
+      "telefone":"555555555555555555555"
+    }
+
+
+  ]
+}
