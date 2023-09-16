@@ -5,14 +5,14 @@
       Adicionar fornecedor
     </button>
   </header>
-  <div class="mural" *ngIf="listaCadastro.length > 0, else semCadastro">
-    <div *ngFor="let cadastro of listaCadastro ">
+  <div class="mural" *ngIf="listaCadastro.length > 0; else semCadastro">
+    <div *ngFor="let cadastro of listaCadastro">
       <app-item-cadastrado [cadastro]="cadastro"></app-item-cadastrado>
     </div>
   </div>
   <ng-template #semCadastro>
-    <div class="ff-inter sem-pensamentos">
-        <h2>Ainda não existem fornecedores cadastrados!</h2>
-  </div>
-</ng-template>
+    <div class="ff-inter sem-cadastro">
+      <h2>Ainda não existem fornecedores cadastrados!</h2>
+    </div>
+  </ng-template>
 </section>

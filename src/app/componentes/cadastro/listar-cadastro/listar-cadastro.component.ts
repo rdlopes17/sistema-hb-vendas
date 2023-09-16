@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Cadastro } from '../cadastro';
+import { CadastroService } from '../cadastro.service';
 
 @Component({
   selector: 'app-listar-cadastro',
@@ -7,30 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarCadastroComponent implements OnInit {
 
-  listaCadastro = [
-    {
-      nome: 'nome do forncedor 1',
-      categoria: 'cadastro do fornecedor 2',
-      email: 'fornecedor2@contato.com',
-      telefone:'77777777777777'
-    },
-    {
-      nome: 'nome do forncedor 2',
-      categoria: 'cadastro do fornecedor 2',
-      email: 'fornecedor2@contato.com',
-      telefone:'77777777777777'
-    },
-    {
-      nome: 'raul lopes de oliveira silveira do nascimento',
-      categoria: 'cadastro do fornecedor 3',
-      email: 'fornecedor2@contato.com',
-      telefone:'77777777777777'
-    }
-  ];
+  listaCadastro: Cadastro[] = [];
 
-  constructor() { }
+  constructor(private service: CadastroService) { }
 
   ngOnInit(): void {
+    this.service.listar().subscribe((listaCadastro) => {
+      this.listaCadastro = listaCadastro
+    })
   }
 
 }

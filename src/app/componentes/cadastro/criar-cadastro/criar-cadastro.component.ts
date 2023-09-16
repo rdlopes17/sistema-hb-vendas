@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Cadastro } from '../cadastro';
+import { Router } from '@angular/router';
+import { CadastroService } from '../cadastro.service';
 
 @Component({
   selector: 'app-criar-cadastro',
@@ -7,24 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarCadastroComponent implements OnInit {
 
-  cadastro = {
-    nome: 'nome do forncedor',
-    categoria: 'cadastro do fornecedor',
-    email: 'fornecedor@contato.com',
-    telefone:'99999999999999'
+  cadastro: Cadastro = {
+    nome: '',
+    categoria: '',
+    email: '',
+    telefone:''
   }
 
-  constructor() { }
+  constructor(
+    private service: CadastroService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
   criarCadastro() {
-    alert('tesde de botao')
+    this.service.criar(this.cadastro).subscribe()
+    this.router.navigate(['/listarCadastro'])
   }
 
   cancelar() {
-    alert('teste de cancelar')
+    this.router.navigate(['/listarCadastro'])
   }
 
 }

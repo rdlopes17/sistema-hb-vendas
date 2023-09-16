@@ -17,18 +17,18 @@
   margin-top: 10px;
 }
 
-.pensamento {
+.cadastro {
   background-color: #F8F9FE;
   padding: 1rem;
   box-sizing: border-box;
 }
 
-.pensamento .conteudo {
+.cadastro .conteudo {
   margin: 1rem auto;
   word-wrap: break-word;
 }
 
-.pensamento .autoria {
+.cadastro .autoria {
   word-wrap: break-word;
 }
 
@@ -42,7 +42,7 @@
   justify-self: center;
 }
 
-.pensamento-g {
+.cadastro-g {
   width: 350px;
 }
 
@@ -51,7 +51,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .pensamento-g {
+  .cadastro-g {
     width: 100%;
   }
 }
